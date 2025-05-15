@@ -38,7 +38,7 @@ let BotUpdate = class BotUpdate {
             'кто сосал?': 'УМАР и ВЕРА СОСУТСЯ! ХПАХПАХПАХ💀',
             хорошо: 'отлично! удачи!',
             'кто сосал': 'УМАР и ВЕРА СОСУТСЯ! ХПАХПАХПАХ',
-            'я тваю маму еба': ' Я твою маму ебал, а ты? 🗿',
+            'я твою маму ебал': ' Я твою маму ебал, а ты? 🗿',
             'ты бот?': 'Я бот, а ты кто?',
             'ты лох?': 'Ты лох, а я РАБОВЛАДЕЛЕЦ ТВОЙ! ХПАХПАХПАХ💀',
             'кто такой Олег?': 'Вопрос:"кто такой Олег?" - ОН ТВОЙ ВЛАДЕЛЕТЦ! СМЫСЛ ЖИЗНИ - ЭТО ОН! 🗿',
@@ -113,9 +113,6 @@ let BotUpdate = class BotUpdate {
             }
         }
     }
-    async handleSticker(ctx) {
-        await ctx.reply('Прикольный стикер! 🥳');
-    }
     async handleEditedMessage(ctx) {
         const user = ctx.editedMessage?.from;
         const previousMessage = ctx.editedMessage && 'text' in ctx.editedMessage
@@ -144,13 +141,6 @@ __decorate([
     __metadata("design:paramtypes", [telegraf_1.Context]),
     __metadata("design:returntype", Promise)
 ], BotUpdate.prototype, "handleTex", null);
-__decorate([
-    (0, nestjs_telegraf_1.On)('sticker'),
-    __param(0, (0, nestjs_telegraf_1.Ctx)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [telegraf_1.Context]),
-    __metadata("design:returntype", Promise)
-], BotUpdate.prototype, "handleSticker", null);
 __decorate([
     (0, nestjs_telegraf_1.On)('edited_message'),
     __param(0, (0, nestjs_telegraf_1.Ctx)()),
